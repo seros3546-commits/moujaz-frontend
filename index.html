@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موجَز | خدمات أكاديمية احترافية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --deep:    #060e1a;
+  --base:    #0a1828;
+  --card:    #0c2040;
+  --card2:   #0e2448;
+  --navy:    #0c3054;
+  --mid:     #183c60;
+  --steel:   #24486c;
+  --bright:  #3084c0;
+  --sky:     #3c84b4;
+  --pale:    #6ca8cc;
+  --lighter: #a8cce0;
+  --white:   #eaf2f8;
+  --bd1: rgba(48,132,192,0.18);
+  --bd2: rgba(48,132,192,0.38);
+  --bd3: rgba(108,168,204,0.6);
+  --txt:  #dceaf4;
+  --txt2: #8ab4cc;
+  --muted:#4a7090;
+  --gold: #e8c060;
+  --green:#4ade80;
+  --red:  #f87171;
+}
+html,body{min-height:100vh;background:var(--deep);color:var(--txt);font-family:'Cairo',sans-serif;direction:rtl}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--deep)}::-webkit-scrollbar-thumb{background:var(--navy);border-radius:3px}
+
+/* PAGES */
+.page{display:none;min-height:100vh;flex-direction:column}
+.page.active{display:flex;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* HEADER */
+.hdr{background:rgba(6,14,26,.97);backdrop-filter:blur(16px);padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bd1);position:sticky;top:0;z-index:300}
+.logo-row{display:flex;align-items:center;gap:10px}
+.logo-row img{height:48px;filter:drop-shadow(0 0 12px rgba(48,132,192,.7))}
+.brand-name{font-family:'Tajawal',sans-serif;font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#c8e0f0,#6ca8cc,#3084c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-sub{font-size:.58rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-top:1px}
+.hdr-nav{display:flex;gap:.5rem}
+.nav-btn{background:rgba(48,132,192,.1);border:1px solid var(--bd1);color:var(--txt2);border-radius:8px;padding:.32rem .75rem;font-size:.72rem;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s;white-space:nowrap}
+.nav-btn:hover,.nav-btn.active{background:rgba(48,132,192,.25);border-color:var(--bd2);color:var(--white)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:2.5rem 1.3rem 2rem;text-align:center;background:linear-gradient(170deg,#060e1a 0%,#0a1828 50%,#0c2040 100%)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% -20%,rgba(48,132,192,.15) 0%,transparent 65%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(48,132,192,.04) 50px),repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(48,132,192,.03) 50px);pointer-events:none}
+.hero-logo{width:80px;margin:0 auto 1rem;display:block;filter:drop-shadow(0 0 18px rgba(48,132,192,.65));animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hero h1{font-family:'Tajawal',sans-serif;font-size:1.9rem;font-weight:900;color:var(--white);margin-bottom:.45rem;position:relative;text-shadow:0 2px 20px rgba(48,132,192,.3)}
+.hero-sub{color:var(--txt2);font-size:.85rem;max-width:380px;margin:0 auto 1.5rem;line-height:1.85;position:relative}
+.hero-div{display:flex;align-items:center;gap:.7rem;max-width:260px;margin:0 auto}
+.hero-div::before,.hero-div::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--bd2),transparent)}
+.hero-div span{font-size:.62rem;letter-spacing:3px;color:var(--muted);white-space:nowrap}
+
+/* SERVICES GRID */
+.svc-section{padding:1.6rem 1.2rem 2rem;flex:1}
+.sec-lbl{text-align:center;font-size:.68rem;font-weight:700;color:var(--bright);letter-spacing:3px;margin-bottom:1.3rem}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;max-width:520px;margin:0 auto}
+.svc-card{background:linear-gradient(150deg,var(--card),var(--card2));border:1px solid var(--bd1);border-radius:16px;padding:1.3rem .9rem 1rem;cursor:pointer;transition:all .3s;text-align:center;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--bright),transparent);opacity:0;transition:opacity .3s}
+.svc-card:hover{border-color:var(--bd3);transform:translateY(-4px);box-shadow:0 14px 36px rgba(12,48,84,.5)}
+.svc-card:hover::before{opacity:1}
+.svc-card:active{transform:scale(.97)}
+.svc-ai{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff;font-size:.55rem;border-radius:10px;padding:2px 7px;font-weight:800;letter-spacing:.5px}
+.svc-icon{font-size:1.9rem;margin-bottom:.6rem;display:block}
+.svc-name{font-family:'Tajawal',sans-serif;font-size:.92rem;font-weight:800;color:var(--white);margin-bottom:.25rem}
+.svc-price{font-size:.7rem;color:var(--muted)}
+.svc-tag{display:inline-block;margin-top:.45rem;border:1px solid var(--bd2);color:var(--pale);font-size:.6rem;border-radius:20px;padding:2px 8px;font-weight:700;background:rgba(48,132,192,.08)}
+.svc-btn{display:block;width:100%;margin-top:.8rem;background:linear-gradient(135deg,var(--navy),var(--mid),var(--steel));color:var(--white);border:1px solid var(--bd2);border-radius:10px;padding:.48rem;font-size:.78rem;font-family:'Cairo',sans-serif;font-weight:700;cursor:pointer;transition:all .22s}
+.svc-btn:hover{background:linear-gradient(135deg,var(--mid),var(--steel),var(--bright));box-shadow:0 4px 14px rgba(48,132,192,.35);border-color:var(--bd3)}
+
+/* FORM */
+.fhdr{background:rgba(6,14,26,.98);padding:.8rem 1.2rem;display:flex;align-items:center;gap:.75rem;border-bottom:1px solid var(--bd1);position:sticky;top:0;z-index:200}
+.back-btn{background:rgba(12,48,84,.4);border:1px solid var(--bd2);color:var(--txt2);border-radius:9px;padding:.35rem .8rem;font-size:.78rem;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s;white-space:nowrap}
+.back-btn:hover{background:rgba(24,60,96,.6);color:var(--white)}
+.fhdr h2{font-family:'Tajawal',sans-serif;font-size:.96rem;font-weight:800;color:var(--txt);flex:1;text-align:center}
+.fbody{padding:1.3rem 1.2rem;flex:1}
+.finner{max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:.95rem}
+.fg{display:flex;flex-direction:column;gap:.33rem}
+.fg label{font-size:.76rem;color:var(--txt2);font-weight:700;letter-spacing:.3px}
+.fg input,.fg select,.fg textarea{background:rgba(12,32,64,.8);border:1px solid var(--bd1);border-radius:11px;color:var(--white);padding:.65rem .95rem;font-size:.84rem;font-family:'Cairo',sans-serif;direction:rtl;transition:all .2s;outline:none;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--bright);background:rgba(12,48,84,.3);box-shadow:0 0 0 3px rgba(48,132,192,.12)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--muted);font-size:.8rem}
+.fg select option{background:#0c2040;color:var(--white)}
+.rg{display:flex;flex-direction:column;gap:.42rem}
+.ro{display:flex;align-items:center;gap:.62rem;cursor:pointer;padding:.55rem .88rem;background:rgba(12,32,64,.7);border:1px solid var(--bd1);border-radius:10px;transition:all .2s}
+.ro:hover{background:rgba(12,48,84,.3);border-color:var(--bd2)}
+.ro input[type=radio]{accent-color:var(--bright);width:15px;height:15px;flex-shrink:0}
+.ro span{font-size:.8rem;color:var(--txt)}
+.op{color:var(--pale);font-weight:700;font-size:.73rem;margin-right:auto}
+.pay-box{background:rgba(12,48,84,.12);border:1px solid var(--bd1);border-radius:13px;padding:.88rem 1rem}
+.pay-title{font-size:.73rem;font-weight:700;color:var(--txt2);margin-bottom:.62rem}
+.pay-row{display:flex;gap:.45rem;flex-wrap:wrap}
+.pay-pill{background:rgba(12,48,84,.3);border:1px solid var(--bd2);border-radius:20px;padding:.26rem .78rem;font-size:.7rem;color:var(--pale);font-weight:700}
+
+/* PAYMENT STEP */
+.pay-step{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd2);border-radius:16px;padding:1.3rem;margin-bottom:1rem}
+.pay-step-title{font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:800;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.pay-methods-big{display:flex;flex-direction:column;gap:.6rem}
+.pay-method-btn{display:flex;align-items:center;gap:.8rem;background:rgba(12,32,64,.6);border:1px solid var(--bd1);border-radius:12px;padding:.75rem 1rem;cursor:pointer;transition:all .2s}
+.pay-method-btn:hover,.pay-method-btn.selected{border-color:var(--bright);background:rgba(12,48,84,.4)}
+.pay-method-btn .pm-icon{font-size:1.5rem;flex-shrink:0}
+.pay-method-btn .pm-info{flex:1}
+.pay-method-btn .pm-name{font-weight:700;font-size:.88rem;color:var(--white)}
+.pay-method-btn .pm-num{font-size:.72rem;color:var(--txt2);margin-top:.15rem}
+.pay-confirm-note{background:rgba(234,192,96,.08);border:1px solid rgba(234,192,96,.25);border-radius:10px;padding:.7rem;font-size:.75rem;color:var(--gold);margin-top:.8rem;line-height:1.6}
+
+/* SUBMIT */
+.sub-btn{background:linear-gradient(135deg,var(--navy),var(--mid),var(--steel));color:var(--white);border:1px solid var(--bd3);border-radius:13px;padding:.86rem;font-size:.96rem;font-family:'Tajawal',sans-serif;font-weight:800;cursor:pointer;transition:all .26s;letter-spacing:.5px;width:100%;box-shadow:0 4px 18px rgba(12,48,84,.4)}
+.sub-btn:hover{background:linear-gradient(135deg,var(--mid),var(--steel),var(--bright));box-shadow:0 8px 26px rgba(48,132,192,.4);transform:translateY(-2px);border-color:var(--sky)}
+.sub-btn:active{transform:scale(.98)}
+.sub-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* PACKAGES */
+.pkg-wrap{max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:.9rem;padding:1.4rem 1.2rem}
+.pkg-card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd1);border-radius:17px;padding:1.2rem 1.3rem;position:relative;overflow:hidden;transition:all .25s}
+.pkg-card.feat{border-color:var(--bd3);box-shadow:0 0 28px rgba(48,132,192,.14)}
+.pkg-card.feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--bright),var(--sky),transparent)}
+.pkg-badge{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,var(--navy),var(--mid));border:1px solid var(--bd2);color:var(--pale);font-size:.6rem;border-radius:20px;padding:3px 9px;font-weight:800}
+.pkg-name{font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:900;color:var(--white);margin-bottom:.22rem}
+.pkg-price{font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--pale),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.55rem}
+.pkg-price span{font-size:.72rem;-webkit-text-fill-color:var(--muted);font-weight:400}
+.pkg-feats{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:.85rem}
+.pkg-feats li{font-size:.78rem;color:var(--txt2);display:flex;align-items:center;gap:.42rem}
+.pkg-feats li::before{content:'✓';color:var(--bright);font-weight:900;flex-shrink:0}
+
+/* TRANSLATION */
+.trans-wrap{max-width:460px;margin:0 auto;padding:1.4rem 1.2rem;display:flex;flex-direction:column;gap:.72rem}
+.trans-note{font-size:.78rem;color:var(--muted);text-align:center;margin-bottom:.4rem}
+.trans-item{background:rgba(12,32,64,.8);border:1px solid var(--bd1);border-radius:13px;padding:.9rem 1.1rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all .22s}
+.trans-item:hover{background:rgba(12,48,84,.3);border-color:var(--bd3);transform:translateX(-4px)}
+.t-name{font-weight:700;font-size:.9rem;color:var(--white)}
+.t-desc{font-size:.72rem;color:var(--muted);margin-top:.16rem}
+
+/* UPLOAD FIELD */
+.upload-area{background:rgba(12,32,64,.6);border:2px dashed var(--bd2);border-radius:14px;padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s;position:relative}
+.upload-area:hover{border-color:var(--bright);background:rgba(12,48,84,.2)}
+.upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-icon{font-size:2rem;margin-bottom:.5rem;display:block}
+.upload-text{font-size:.82rem;color:var(--txt2);font-weight:600}
+.upload-sub{font-size:.7rem;color:var(--muted);margin-top:.25rem}
+.file-chosen{font-size:.75rem;color:var(--green);margin-top:.4rem;font-weight:700}
+
+/* AI CHAT */
+.ai-chat-bubble{position:fixed;bottom:1.4rem;left:1.4rem;z-index:500}
+.ai-btn{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--bright));border:2px solid var(--bd3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 6px 20px rgba(48,132,192,.4);transition:all .2s;animation:pulse-ring 3s infinite}
+@keyframes pulse-ring{0%,100%{box-shadow:0 6px 20px rgba(48,132,192,.4)}50%{box-shadow:0 6px 28px rgba(48,132,192,.7),0 0 0 6px rgba(48,132,192,.12)}}
+.ai-btn:hover{transform:scale(1.08)}
+.ai-panel{position:fixed;bottom:5rem;left:1rem;width:310px;max-height:440px;background:rgba(10,24,40,.97);border:1px solid var(--bd2);border-radius:18px;display:none;flex-direction:column;box-shadow:0 16px 48px rgba(6,14,26,.8);overflow:hidden;z-index:500}
+.ai-panel.open{display:flex}
+.ai-panel-hdr{background:linear-gradient(135deg,var(--navy),var(--mid));padding:.75rem 1rem;display:flex;align-items:center;gap:.6rem;border-bottom:1px solid var(--bd1)}
+.ai-panel-hdr span{font-size:1.1rem}
+.ai-panel-hdr div{flex:1}
+.ai-panel-hdr .ai-title{font-weight:800;font-size:.85rem;color:var(--white)}
+.ai-panel-hdr .ai-sub{font-size:.65rem;color:var(--pale)}
+.ai-close{background:none;border:none;color:var(--txt2);cursor:pointer;font-size:1rem;padding:.2rem}
+.ai-msgs{flex:1;overflow-y:auto;padding:.8rem;display:flex;flex-direction:column;gap:.6rem;max-height:280px}
+.ai-msg{max-width:85%;padding:.55rem .8rem;border-radius:12px;font-size:.78rem;line-height:1.6}
+.ai-msg.bot{background:rgba(12,48,84,.5);border:1px solid var(--bd1);color:var(--txt);align-self:flex-start;border-radius:4px 12px 12px 12px}
+.ai-msg.user{background:linear-gradient(135deg,var(--navy),var(--mid));color:var(--white);align-self:flex-end;border-radius:12px 4px 12px 12px}
+.ai-msg.typing{color:var(--txt2)}
+.ai-inp-row{display:flex;gap:.5rem;padding:.75rem;border-top:1px solid var(--bd1)}
+.ai-inp{flex:1;background:rgba(12,32,64,.8);border:1px solid var(--bd1);border-radius:10px;color:var(--white);padding:.5rem .75rem;font-size:.78rem;font-family:'Cairo',sans-serif;direction:rtl;outline:none}
+.ai-inp:focus{border-color:var(--bright)}
+.ai-send{background:linear-gradient(135deg,var(--navy),var(--bright));border:none;border-radius:10px;color:var(--white);padding:.5rem .7rem;cursor:pointer;font-size:.85rem;flex-shrink:0}
+
+/* ABOUT */
+.about-wrap{max-width:500px;margin:0 auto;padding:1.5rem 1.2rem;flex:1}
+.about-hero{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd2);border-radius:20px;padding:1.5rem;text-align:center;margin-bottom:1.2rem;position:relative;overflow:hidden}
+.about-hero::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:radial-gradient(circle,rgba(48,132,192,.2),transparent);border-radius:50%}
+.about-logo{height:64px;margin:0 auto .8rem;display:block;filter:drop-shadow(0 0 14px rgba(48,132,192,.6))}
+.about-title{font-family:'Tajawal',sans-serif;font-size:1.4rem;font-weight:900;color:var(--white);margin-bottom:.5rem}
+.about-tagline{font-size:.82rem;color:var(--txt2);line-height:1.75}
+.about-cards{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.2rem}
+.about-card{background:rgba(12,32,64,.6);border:1px solid var(--bd1);border-radius:14px;padding:1rem 1.1rem;display:flex;gap:.85rem;align-items:flex-start}
+.about-card-icon{font-size:1.6rem;flex-shrink:0;margin-top:.1rem}
+.about-card-title{font-weight:800;font-size:.88rem;color:var(--white);margin-bottom:.25rem}
+.about-card-txt{font-size:.78rem;color:var(--txt2);line-height:1.7}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-bottom:1.2rem}
+.stat-box{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd1);border-radius:14px;padding:.9rem .5rem;text-align:center}
+.stat-num{font-family:'Tajawal',sans-serif;font-size:1.5rem;font-weight:900;color:var(--bright)}
+.stat-lbl{font-size:.65rem;color:var(--muted);margin-top:.2rem}
+
+/* OFFERS */
+.offers-wrap{max-width:500px;margin:0 auto;padding:1.3rem 1.2rem;display:flex;flex-direction:column;gap:1rem}
+.offer-card{border-radius:18px;padding:1.3rem 1.2rem;position:relative;overflow:hidden;cursor:pointer;transition:transform .2s}
+.offer-card:hover{transform:scale(1.01)}
+.offer-card.gold-card{background:linear-gradient(135deg,#1a1000,#2a1a00,#1a0e00);border:1px solid rgba(234,192,96,.4)}
+.offer-card.gold-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.offer-card.blue-card{background:linear-gradient(135deg,var(--card),#0a2040,var(--card2));border:1px solid var(--bd3)}
+.offer-card.blue-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--bright),transparent)}
+.offer-card.purple-card{background:linear-gradient(135deg,#120820,#1a0a30,#0e0618);border:1px solid rgba(139,92,246,.4)}
+.offer-card.purple-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#8b5cf6,transparent)}
+.offer-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.62rem;font-weight:800;letter-spacing:1.5px;border-radius:20px;padding:3px 10px;margin-bottom:.7rem}
+.offer-badge.gold-b{background:rgba(234,192,96,.15);border:1px solid rgba(234,192,96,.35);color:var(--gold)}
+.offer-badge.blue-b{background:rgba(48,132,192,.15);border:1px solid var(--bd2);color:var(--pale)}
+.offer-badge.purple-b{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.35);color:#c4b5fd}
+.offer-title{font-family:'Tajawal',sans-serif;font-size:1.15rem;font-weight:900;color:var(--white);margin-bottom:.4rem}
+.offer-desc{font-size:.8rem;color:var(--txt2);line-height:1.7;margin-bottom:.8rem}
+.offer-discount{font-family:'Tajawal',sans-serif;font-size:2rem;font-weight:900;margin-bottom:.3rem}
+.offer-discount.gold-d{color:var(--gold)}
+.offer-discount.blue-d{color:var(--pale)}
+.offer-discount.purple-d{color:#c4b5fd}
+.offer-details{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
+.offer-detail{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--txt2)}
+.offer-detail::before{content:'✦';font-size:.6rem;flex-shrink:0}
+.offer-detail.gold-det::before{color:var(--gold)}
+.offer-detail.blue-det::before{color:var(--bright)}
+.offer-detail.purple-det::before{color:#5fbff7}
+.offer-cta{display:block;width:100%;padding:.65rem;border-radius:12px;font-size:.88rem;font-family:'Tajawal',sans-serif;font-weight:800;cursor:pointer;border:none;transition:all .22s;letter-spacing:.3px}
+.offer-cta.gold-cta{background:linear-gradient(135deg,#b8860b,var(--gold),#c8960c);color:#1a1000;box-shadow:0 4px 16px rgba(234,192,96,.3)}
+.offer-cta.blue-cta{background:linear-gradient(135deg,var(--navy),var(--bright));color:var(--white);box-shadow:0 4px 16px rgba(48,132,192,.3);border:1px solid var(--bd3)}
+.offer-cta.purple-cta{background:linear-gradient(135deg,#1d6595,#2e97f3);color:#fff;box-shadow:0 4px 16px rgba(2, 128, 255, 0.3)}
+.offer-shine{position:absolute;top:-50%;right:-20%;width:150px;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);transform:skewX(-20deg);pointer-events:none}
+.ref-box{background:rgba(12,32,64,.5);border:1px solid var(--bd2);border-radius:12px;padding:.9rem;margin-top:.5rem}
+.ref-link{font-size:.72rem;color:var(--bright);word-break:break-all;font-family:monospace;margin:.4rem 0;display:block}
+.ref-copy-btn{background:rgba(48,132,192,.15);border:1px solid var(--bd2);color:var(--pale);border-radius:8px;padding:.3rem .8rem;font-size:.72rem;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s}
+.ref-copy-btn:hover{background:rgba(48,132,192,.3)}
+
+/* CONTACT */
+.contact-wrap{max-width:460px;margin:0 auto;padding:1.5rem 1.2rem;display:flex;flex-direction:column;gap:.9rem}
+.contact-card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd1);border-radius:16px;padding:1.1rem 1.2rem;display:flex;align-items:center;gap:.9rem;cursor:pointer;transition:all .22s;text-decoration:none}
+.contact-card:hover{border-color:var(--bd3);transform:translateX(-4px)}
+.contact-icon{font-size:1.8rem;flex-shrink:0}
+.contact-name{font-weight:800;font-size:.92rem;color:var(--white)}
+.contact-val{font-size:.75rem;color:var(--txt2);margin-top:.15rem}
+.faq-item{background:rgba(12,32,64,.5);border:1px solid var(--bd1);border-radius:13px;overflow:hidden}
+.faq-q{padding:.85rem 1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:.84rem;color:var(--white)}
+.faq-q span{color:var(--muted);transition:transform .2s;font-size:.8rem}
+.faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:all .3s;font-size:.78rem;color:var(--txt2);line-height:1.75}
+.faq-a.open{padding:.7rem 1rem;max-height:200px}
+
+/* RATING */
+.rating-wrap{max-width:420px;margin:0 auto;padding:2rem 1.2rem;text-align:center}
+.rating-card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--bd2);border-radius:20px;padding:2rem 1.5rem;box-shadow:0 0 36px rgba(48,132,192,.12);animation:popIn .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes popIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+.rating-icon{font-size:3rem;margin-bottom:.8rem;display:block}
+.rating-title{font-family:'Tajawal',sans-serif;font-size:1.2rem;font-weight:900;color:var(--white);margin-bottom:.4rem}
+.rating-sub{font-size:.8rem;color:var(--txt2);margin-bottom:1.2rem}
+.stars-row{display:flex;justify-content:center;gap:.5rem;margin-bottom:1rem;direction:ltr}
+.star-btn{font-size:2rem;cursor:pointer;transition:transform .2s;color:#4a6070;border:none;background:none;padding:.1rem}
+.star-btn:hover,.star-btn.lit{color:var(--gold);transform:scale(1.15)}
+.rating-textarea{background:rgba(12,32,64,.8);border:1px solid var(--bd1);border-radius:11px;color:var(--white);padding:.7rem .95rem;font-size:.82rem;font-family:'Cairo',sans-serif;direction:rtl;outline:none;width:100%;resize:none;margin-bottom:.85rem}
+.rating-textarea:focus{border-color:var(--bright)}
+
+/* SUCCESS */
+.success-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem}
+.success-card{background:linear-gradient(150deg,var(--card),var(--card2));border:1px solid var(--bd2);border-radius:20px;padding:2rem 1.5rem;text-align:center;max-width:340px;width:100%;box-shadow:0 0 36px rgba(48,132,192,.14);animation:popIn .4s cubic-bezier(.34,1.56,.64,1)}
+.suc-icon{font-size:3.2rem;margin-bottom:.8rem;display:block}
+.suc-h{font-family:'Tajawal',sans-serif;font-size:1.2rem;font-weight:900;color:var(--green);margin-bottom:.5rem}
+.suc-p{font-size:.82rem;color:var(--txt2);line-height:1.75}
+.suc-note{margin-top:.85rem;background:rgba(12,48,84,.2);border:1px solid var(--bd1);border-radius:11px;padding:.65rem;font-size:.73rem;color:var(--muted)}
+.home-btn{display:block;width:100%;margin-top:1rem;background:linear-gradient(135deg,var(--navy),var(--mid),var(--steel));color:var(--txt);border:1px solid var(--bd2);border-radius:11px;padding:.68rem;font-size:.88rem;font-family:'Tajawal',sans-serif;font-weight:800;cursor:pointer;transition:all .2s}
+.home-btn:hover{box-shadow:0 4px 14px rgba(48,132,192,.35);border-color:var(--bd3)}
+
+/* FOOTER */
+.site-footer{background:rgba(6,9,14,.98);border-top:1px solid var(--bd1);padding:1.3rem 1.2rem;text-align:center}
+.footer-logo{height:34px;margin:0 auto .6rem;display:block;filter:drop-shadow(0 0 7px rgba(48,132,192,.4))opacity(.7)}
+.social-row{display:flex;justify-content:center;gap:.65rem;flex-wrap:wrap;margin-bottom:.5rem}
+.soc-link{display:flex;align-items:center;gap:.38rem;background:rgba(12,48,84,.18);border:1px solid var(--bd1);border-radius:25px;padding:.38rem .9rem;color:var(--txt2);font-size:.74rem;text-decoration:none;cursor:pointer;transition:all .2s;font-family:'Cairo',sans-serif;font-weight:600}
+.soc-link:hover{background:rgba(12,48,84,.4);border-color:var(--bd3);color:var(--white)}
+.footer-copy{font-size:.6rem;color:var(--muted)}
+
+/* MISC */
+.err-msg{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:9px;padding:.62rem 1rem;font-size:.76rem;color:#fca5a5;display:none;text-align:center}
+.err-msg.show{display:block}
+.opt-lbl{color:var(--muted);font-weight:400;font-size:.68rem}
+.req-lbl{color:var(--red);font-size:.68rem}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--bd2),transparent);margin:.5rem 0}
+
+/* AI SERVICES GRID */
+.ai-svc-section{background:linear-gradient(180deg,rgba(72,36,120,.08),transparent);padding:1.5rem 1.2rem;border-top:1px solid rgba(139,92,246,.15)}
+.ai-sec-lbl{text-align:center;font-size:.68rem;font-weight:700;color:#a78bfa;letter-spacing:3px;margin-bottom:.5rem}
+.ai-sec-title{text-align:center;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:900;color:var(--white);margin-bottom:1.2rem}
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;max-width:520px;margin:0 auto}
+.ai-card{background:linear-gradient(150deg,rgba(18,8,32,.9),rgba(26,10,48,.9));border:1px solid rgba(139,92,246,.22);border-radius:15px;padding:1.1rem .85rem;cursor:pointer;transition:all .3s;text-align:center;position:relative;overflow:hidden}
+.ai-card::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#8b5cf6,transparent);opacity:0;transition:opacity .3s}
+.ai-card:hover{border-color:rgba(23, 193, 219, 0.5);transform:translateY(-3px);box-shadow:0 10px 28px rgba(72,36,120,.35)}
+.ai-card:hover::before{opacity:1}
+.ai-card:active{transform:scale(.97)}
+.ai-card-icon{font-size:1.8rem;margin-bottom:.55rem;display:block}
+.ai-card-name{font-family:'Tajawal',sans-serif;font-size:.88rem;font-weight:800;color:var(--white);margin-bottom:.22rem}
+.ai-card-price{font-size:.68rem;color:#a78bfa}
+.ai-card-tag{display:inline-block;margin-top:.42rem;border:1px solid rgba(139,92,246,.35);color:#c4b5fd;font-size:.58rem;border-radius:20px;padding:2px 7px;font-weight:700;background:rgba(139,92,246,.08)}
+.ai-card-btn{display:block;width:100%;margin-top:.75rem;background:linear-gradient(135deg,#3b0764,#6d28d9,#4c1d95);color:#fff;border:1px solid rgba(139,92,246,.4);border-radius:10px;padding:.46rem;font-size:.76rem;font-family:'Cairo',sans-serif;font-weight:700;cursor:pointer;transition:all .22s}
+.ai-card-btn:hover{box-shadow:0 4px 14px rgba(29, 183, 249, 0.4);border-color:rgba(36, 138, 255, 0.7)}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HOME ══════════════ -->
+<div id="page-home" class="page active">
+  <header class="hdr">
+    <div class="logo-row">
+      <img src="logo.png" alt="موجز" onerror="this.style.display='none'">
+      <div>
+        <div class="brand-name">موجَز</div>
+        <div class="brand-sub">MOUJAZ · Academic Services</div>
+      </div>
+    </div>
+    <div class="hdr-nav">
+      <button class="nav-btn" onclick="go('page-about')">عن موجَز</button>
+      <button class="nav-btn" onclick="go('page-offers')">عروضنا</button>
+      <button class="nav-btn" onclick="go('page-contact')">للتواصل مع الدعم</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-bg"></div><div class="hero-grid"></div>
+    <img src="logo.png" class="hero-logo" alt="" onerror="this.style.display='none'">
+    <h1>خدماتنا الأكاديمية</h1>
+    <p class="hero-sub">حلول أكاديمية متكاملة للطلاب العراقيين — بجودة احترافية وتسليم سريع</p>
+    <div class="hero-div"><span>اختر خدمتك</span></div>
+  </div>
+
+  <!-- HUMAN SERVICES -->
+  <div class="svc-section">
+    <div class="sec-lbl">الخدمات الأكاديمية</div>
+    <div class="svc-grid">
+      <div class="svc-card" onclick="go('page-report')">
+        <span class="svc-icon">📄</span>
+        <div class="svc-name">تقرير جامعي</div>
+        <div class="svc-price">من 7,000 د.ع</div>
+        <div class="svc-tag">متاح الآن</div>
+        <button class="svc-btn">اطلب الآن</button>
+      </div>
+      <div class="svc-card" onclick="go('page-present')">
+        <span class="svc-icon">📊</span>
+        <div class="svc-name">برزنتيشن</div>
+        <div class="svc-price">3 باقات</div>
+        <div class="svc-tag">متاح الآن</div>
+        <button class="svc-btn">اطلب الآن</button>
+      </div>
+      <div class="svc-card" onclick="go('page-thesis')">
+        <span class="svc-icon">🎓</span>
+        <div class="svc-name">بحث تخرج</div>
+        <div class="svc-price">30,000 د.ع</div>
+        <div class="svc-tag">متاح الآن</div>
+        <button class="svc-btn">اطلب الآن</button>
+      </div>
+      <div class="svc-card" onclick="go('page-trans')">
+        <span class="svc-icon">🌐</span>
+        <div class="svc-name">ترجمة المحاضرات</div>
+        <div class="svc-price">حسب الطلب</div>
+        <div class="svc-tag">متاح الآن</div>
+        <button class="svc-btn">اطلب الآن</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI SERVICES -->
+  <div class="ai-svc-section">
+    <div class="ai-sec-lbl">مدعوم بالذكاء الاصطناعي ⚡</div>
+    <div class="ai-sec-title">خدمات فورية — تسليم بثواني</div>
+    <div class="ai-grid">
+      <div class="ai-card" onclick="go('page-ai-summarize')">
+        <span class="ai-card-icon">📚</span>
+        <div class="ai-card-name">تلخيص محاضرة</div>
+        <div class="ai-card-price">2,000 — 4,000 د.ع</div>
+        <div class="ai-card-tag">⚡ فوري</div>
+        <button class="ai-card-btn">جرّب الآن</button>
+      </div>
+      <div class="ai-card" onclick="go('page-ai-questions')">
+        <span class="ai-card-icon">🎯</span>
+        <div class="ai-card-name">أسئلة متوقعة</div>
+        <div class="ai-card-price">3,000 د.ع</div>
+        <div class="ai-card-tag">⚡ فوري</div>
+        <button class="ai-card-btn">جرّب الآن</button>
+      </div>
+      <div class="ai-card" onclick="go('page-ai-improve')">
+        <span class="ai-card-icon">✨</span>
+        <div class="ai-card-name">تحسين التقرير</div>
+        <div class="ai-card-price">5,000 د.ع</div>
+        <div class="ai-card-tag">⚡ فوري</div>
+        <button class="ai-card-btn">جرّب الآن</button>
+      </div>
+      <div class="ai-card" onclick="go('page-ai-explain')">
+        <span class="ai-card-icon">💡</span>
+        <div class="ai-card-name">شرح موضوع</div>
+        <div class="ai-card-price">2,500 د.ع</div>
+        <div class="ai-card-tag">⚡ فوري</div>
+        <button class="ai-card-btn">جرّب الآن</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <img src="logo.png" class="footer-logo" alt="" onerror="this.style.display='none'">
+    <div class="social-row">
+      <a class="soc-link" href="https://t.me/moujaziq_bot" target="_blank">✈️ @moujaziq_bot</a>
+      <a class="soc-link" href="https://www.instagram.com/moujaz.iq?igsh=MTBhbDRraDZ6d2VkYw==" target="_blank">📷 moujaz.iq</a>
+    </div>
+    <div class="footer-copy">© 2026 موجَز • جميع الحقوق محفوظة</div>
+  </footer>
+</div>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<div id="page-about" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>عن موجَز</h2></div>
+  <div class="about-wrap">
+    <div class="about-hero">
+      <img src="logo.png" class="about-logo" alt="" onerror="this.style.display='none'">
+      <div class="about-title">موجَز — مو بس خدمة، أهل!</div>
+      <div class="about-tagline">احنا طلاب عراقيين طموحين، عشنا نفس ضغوط الدراسة وفهمنا المشكلة من الداخل. قررنا نحول هذا الفهم لخدمة تفرق وتنفع كل طالب عراقي.</div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">+200</div><div class="stat-lbl">طالب راضي</div></div>
+      <div class="stat-box"><div class="stat-num">4.9⭐</div><div class="stat-lbl">تقييم الطلاب</div></div>
+      <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-lbl">خدمة متواصلة</div></div>
+    </div>
+    <div class="about-cards">
+      <div class="about-card">
+        <span class="about-card-icon">🎓</span>
+        <div><div class="about-card-title">احنا نفهمكم</div><div class="about-card-txt">مريناه قبلكم — الديدلاينات الضيقة، الدكاترة الصارمين، والضغط اللي ما يوصف. عشان هيج خدمتنا مو روتينية، هي فهم حقيقي لاحتياجاتكم.</div></div>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">⚡</span>
+        <div><div class="about-card-title">سرعة وجودة بنفس الوقت</div><div class="about-card-txt">ما نؤمن بالعذر "السرعة تأثر على الجودة". عندنا تسليم عاجل بنفس المستوى الاحترافي — لأن وقتكم غالي.</div></div>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🔒</span>
+        <div><div class="about-card-title">سرية تامة</div><div class="about-card-txt">معلوماتكم تبقى عندنا بس. ما نشارك أي بيانات مع أي جهة. خدمتنا بينك وبيننا.</div></div>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🤖</span>
+        <div><div class="about-card-title">تقنية + خبرة بشرية</div><div class="about-card-txt">نجمع بين قوة الذكاء الاصطناعي وخبرة طلاب متخصصين — النتيجة: جودة ما تلاقيها عند غيرنا.</div></div>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">💙</span>
+        <div><div class="about-card-title">هدفنا خدمتكم</div><div class="about-card-txt">مو بس نكسب — نبي نبني سمعة طيبة بين الطلاب العراقيين. كل طالب راضي هو إنجاز بالنسبة لنا.</div></div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="social-row">
+      <a class="soc-link" href="https://t.me/moujaziq_bot" target="_blank">✈️ @moujaziq_bot</a>
+      <a class="soc-link" href="https://www.instagram.com/moujaz.iq?igsh=MTBhbDRraDZ6d2VkYw==" target="_blank">📷 moujaz.iq</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════ OFFERS ══════════════ -->
+<div id="page-offers" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2> عروضنا الحصرية</h2></div>
+  <div class="offers-wrap">
+
+    <!-- OFFER 1: BUNDLE -->
+    <div class="offer-card gold-card">
+      <div class="offer-shine"></div>
+      <div class="offer-badge gold-b">⭐ الأكثر طلباً</div>
+      <div class="offer-title">باقة تقرير + برزنتيشن</div>
+      <div class="offer-discount gold-d">وفّر 20%</div>
+      <div class="offer-details">
+        <div class="offer-detail gold-det">تقرير جامعي احترافي كامل</div>
+        <div class="offer-detail gold-det">برزنتيشن بموضوع من اختيارك !</div>
+        <div class="offer-detail gold-det">تسليم منسق ومتكامل</div>
+        <div class="offer-detail gold-det">بدل تدفع 22,000 — تدفع 17,500 د.ع فقط</div>
+      </div>
+      <button class="offer-cta gold-cta" onclick="go('page-offer-bundle')">اشترِ الباقة الآن</button>
+    </div>
+
+    <!-- OFFER 2: URGENT -->
+    <div class="offer-card blue-card">
+      <div class="offer-shine"></div>
+      <div class="offer-badge blue-b">⚡ تسليم عاجل</div>
+      <div class="offer-title">أولوية التسليم خلال 12 ساعة</div>
+      <div class="offer-discount blue-d">+3,000 د.ع فقط</div>
+      <div class="offer-details">
+        <div class="offer-detail blue-det">تقريرك جاهز خلال 12 ساعة مضمونة</div>
+        <div class="offer-detail blue-det">أولوية قصوى على باقي الطلبات</div>
+        <div class="offer-detail blue-det">إشعار فوري لما يكتمل طلبك</div>
+        <div class="offer-detail blue-det">متاح لجميع الخدمات</div>
+      </div>
+      <button class="offer-cta blue-cta" onclick="go('page-report')">اطلب بأولوية</button>
+    </div>
+
+    <!-- OFFER 3: REFERRAL -->
+    <div class="offer-card purple-card">
+      <div class="offer-shine"></div>
+      <div class="offer-badge purple-b">👥 دعوة صديق</div>
+      <div class="offer-title">انت وصديقك تكسبون!</div>
+      <div class="offer-discount purple-d">خصم 10% + 10%</div>
+      <div class="offer-details">
+        <div class="offer-detail purple-det">شارك رابطك الخاص مع صديقك</div>
+        <div class="offer-detail purple-det">صديقك يحصل خصم 10% على أول طلب</div>
+        <div class="offer-detail purple-det">انت تحصل خصم 10% على طلبك الجاي</div>
+        <div class="offer-detail purple-det">بدون حد — كل صديق يجيبه ربح!</div>
+      </div>
+      <div class="ref-box">
+        <div style="font-size:.73rem;color:var(--txt2);margin-bottom:.4rem;font-weight:700">رابطك الخاص:</div>
+        <span class="ref-link" id="ref-link-display">moujaz.netlify.app/?ref=XXXXXX</span>
+        <button class="ref-copy-btn" onclick="generateRef()">🔗 إنشاء رابطي</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<div id="page-contact" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>تواصل معنا</h2></div>
+  <div class="contact-wrap">
+    <a class="contact-card" href="https://t.me/moujaziq_bot" target="_blank">
+      <span class="contact-icon">✈️</span>
+      <div><div class="contact-name">تيليغرام — الأسرع</div><div class="contact-val">@moujaziq_bot</div></div>
+    </a>
+    <a class="contact-card" href="https://www.instagram.com/moujaz.iq?igsh=MTBhbDRraDZ6d2VkYw==" target="_blank">
+      <span class="contact-icon">📷</span>
+      <div><div class="contact-name">انستقرام</div><div class="contact-val">@moujaz.iq</div></div>
+    </a>
+    <div style="font-family:'Tajawal',sans-serif;font-size:.95rem;font-weight:800;color:var(--txt);margin-top:.5rem">الأسئلة الشائعة</div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كم وقت التسليم؟<span>▼</span></div><div class="faq-a">التقرير العادي 24-48 ساعة. التسليم العاجل 12 ساعة بإضافة 3,000 د.ع فقط. الخدمات الذكاء الاصطناعي فورية بثواني.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كيف يصير الدفع؟<span>▼</span></div><div class="faq-a">بعد ما تعبي النموذج، تختار طريقة الدفع (زين كاش / آسيا / ماستر كارد) ويجيك الأدمن وتدفعله. بعد تأكيد الدفع نبدأ فوراً نشتغل بتجهيز طلبك</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">هل الخدمة سرية؟<span>▼</span></div><div class="faq-a">نعم 100% معلوماتك تبقى بيننا فقط ولا نشاركها مع أي جهة.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">شنو لو ما رضيت عن الشغل؟<span>▼</span></div><div class="faq-a">تتواصل مع  الدعم وتكللنا ونرضيك ، رضاك هو أولويتنا !</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كيف أستلم طلبي؟<span>▼</span></div><div class="faq-a">تستلمة عبر التيليغرام نتواصل وياك عبر معرفك الي حطيته بالطلب </div></div>
+  </div>
+</div>
+
+<!-- ══════════════ REPORT ══════════════ -->
+<div id="page-report" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>📄 تقرير جامعي - املء معلوماتك!</h2></div>
+  <div class="fbody"><div class="finner">
+    <div class="fg"><label>الاسم الثلاثي</label><input id="r-name" type="text" placeholder="أحمد علي حسن"></div>
+    <div class="fg"><label>اسم الجامعة</label><input id="r-uni" type="text" placeholder="جامعة بغداد"></div>
+    <div class="fg"><label>اسم القسم</label><input id="r-dept" type="text" placeholder="قسم الهندسة المدنية "></div>
+    <div class="fg"><label>اسم المادة</label><input id="r-subj" type="text" placeholder="الفيزياء "></div>
+    <div class="fg">
+      <label>عدد الصفحات</label>
+      <div class="rg">
+        <label class="ro"><input type="radio" name="rpages" value="5 صفحات — 7,000 د.ع"><span>تقرير سريع ومختصر 5  صفحات </span><span class="op">7,000 د.ع</span></label>
+        <label class="ro"><input type="radio" name="rpages" value="6–10 صفحات — 12,000 د.ع"><span>تقرير متوسط وموسع 6-10 صفحات</span><span class="op">12,000 د.ع</span></label>
+        <label class="ro"><input type="radio" name="rpages" value="11–15 صفحة — 18,000 د.ع"><span>تقرير تفصيلي ومتكامل 11-15 ص</span><span class="op">18,000 د.ع</span></label>
+      </div>
+    </div>
+    <div class="fg">
+      <label>هل تريد تسليم عاجل؟</label>
+      <div class="rg">
+        <label class="ro"><input type="radio" name="rurgent" value="لا — تسليم عادي"><span>تسليم عادي (24-48 ساعة)</span><span class="op">مجاناً</span></label>
+        <label class="ro"><input type="radio" name="rurgent" value="نعم — تسليم عاجل +3,000 د.ع"><span>تسليم عاجل (12 ساعة)</span><span class="op" style="color:var(--gold)">+3,000 د.ع</span></label>
+      </div>
+    </div>
+    <div class="fg"><label>لغة تقريرك !</label><select id="r-lang"><option value="" disabled selected>اختر اللغة</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="fg"><label>اسم الموضوع <span class="opt-lbl">(اختياري)</span></label><input id="r-topic" type="text" placeholder="نظم إدارة قواعد البيانات"></div>
+    <div class="fg"><label>اسم الدكتور المشرف</label><input id="r-doc" type="text" placeholder="د. محمد الكريم"></div>
+    <div class="fg"><label>معرّف تيليغرام للتسليم</label><input id="r-tg" type="text" placeholder="@username"></div>
+    <!-- PAYMENT STEP -->
+    <div class="pay-step">
+      <div class="pay-step-title">💳 اختر طريقة الدفع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div><div class="pm-num">سيتم إرسال الرقم بعد الطلب</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div><div class="pm-num">سيتم إرسال الرقم بعد الطلب</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div><div class="pm-num">سيتم إرسال التفاصيل بعد الطلب</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن يصلنا طلبك إلا بعد تأكيد الدفع. بعد الضغط على "إرسال" ستصلك تعليمات الدفع عبر تيليغرام.</div>
+    </div>
+    <div class="err-msg" id="r-err">يرجى تعبئة جميع الحقول واختيار طريقة الدفع</div>
+    <button class="sub-btn" onclick="submitReport()">إرسال الطلب ✈️</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ PACKAGES ══════════════ -->
+<div id="page-present" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>📊 اختر باقة البرزنتيشن</h2></div>
+  <div class="pkg-wrap">
+    <div class="pkg-card">
+      <div class="pkg-name">الباقة البرونزية</div>
+      <div class="pkg-price">8,000 <span>د.ع</span></div>
+      <ul class="pkg-feats"><li>حتى 5 شرائح</li><li>تصميم بسيط ومرتب</li><li>تسليم خلال 24 ساعة</li><li>نسخة PowerPoint</li></ul>
+      <button class="svc-btn" onclick="go('page-present-form','برونزي - 8,000 د.ع')">اختيار الباقة</button>
+    </div>
+    <div class="pkg-card feat">
+      <div class="pkg-badge">⭐ الأكثر طلباً</div>
+      <div class="pkg-name">الباقة البلاتينية</div>
+      <div class="pkg-price">15,000 <span>د.ع</span></div>
+      <ul class="pkg-feats"><li>حتى 10 شرائح</li><li>تصميم احترافي ملوّن</li><li>رسوم بيانية وأيقونات</li><li>تسليم خلال 24 ساعة</li><li>PDF + PowerPoint</li></ul>
+      <button class="svc-btn" onclick="go('page-present-form','بلاتيني - 15,000 د.ع')">اختيار الباقة </button>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-name">الباقة الالماسية</div>
+      <div class="pkg-price">25,000 <span>د.ع</span></div>
+      <ul class="pkg-feats"><li>شرائح حسب طلبك</li><li>تصميم فاخر + تحريكات</li><li>إنفوغرافيك احترافي</li><li>تسليم خلال 12 ساعة</li><li>مراجعة مجانية</li><li>جميع الصيغ</li></ul>
+      <button class="svc-btn" onclick="go('page-present-form','الماسي - 25,000 د.ع')">اختيار الباقة</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENT FORM -->
+<div id="page-present-form" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-present')">← رجوع</button><h2 id="pf-title">📊 طلب برزنتيشن</h2></div>
+  <div class="fbody"><div class="finner">
+    <div class="fg"><label>الاسم الثلاثي</label><input id="p-name" type="text" placeholder="أحمد علي حسن"></div>
+    <div class="fg"><label>اسم الجامعة</label><input id="p-uni" type="text" placeholder="جامعة بغداد"></div>
+    <div class="fg"><label>موضوع البرزنتيشن</label><input id="p-topic" type="text" placeholder="الذكاء الاصطناعي في التعليم"></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="p-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>ملاحظات <span class="opt-lbl">(اختياري)</span></label><textarea id="p-notes" rows="3" placeholder="أي تفاصيل مثل عدد الشرائح وغيرها..."></textarea></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 اختر طريقة الدفع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div><div class="pm-num">سيتم إرسال الرقم بعد الطلب</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div><div class="pm-num">سيتم إرسال الرقم بعد الطلب</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن يصلنا طلبك إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="p-err">يرجى تعبئة جميع الحقول واختيار طريقة الدفع</div>
+    <button class="sub-btn" onclick="submitPresent()">إرسال الطلب ✈️</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ THESIS ══════════════ -->
+<div id="page-thesis" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>🎓 بحث تخرج — 30,000 د.ع</h2></div>
+  <div class="fbody"><div class="finner">
+    <div class="fg"><label>الاسم الثلاثي</label><input id="t-name" type="text" placeholder="أحمد علي حسن"></div>
+    <div class="fg"><label>اسم الجامعة</label><input id="t-uni" type="text" placeholder="جامعة بغداد"></div>
+    <div class="fg"><label>اسم القسم</label><input id="t-dept" type="text" placeholder="قسم الحاسبات"></div>
+    <div class="fg"><label>اسم المادة</label><input id="t-subj" type="text" placeholder="مشروع التخرج"></div>
+    <div class="fg"><label>عدد الصفحات</label><select id="t-pages"><option value="" disabled selected>اختر العدد</option><option>20–30 صفحة</option><option>30–50 صفحة</option><option>50–80 صفحة</option><option>أكثر من 80 صفحة</option></select></div>
+    <div class="fg"><label>لغة البحث</label><select id="t-lang"><option value="" disabled selected>اختر اللغة</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="fg"><label>عنوان الموضوع <span class="req-lbl">* مطلوب</span></label><input id="t-topic" type="text" placeholder="تطبيق الذكاء الاصطناعي في المستشفيات العراقية"></div>
+    <div class="fg"><label>اسم الدكتور المشرف</label><input id="t-doc" type="text" placeholder="أ.د. كريم العبيدي"></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="t-tg" type="text" placeholder="@username"></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 اختر طريقة الدفع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div><div class="pm-num">سيتم إرسال الرقم بعد الطلب</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن يصلنا طلبك إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="t-err">يرجى تعبئة جميع الحقول واختيار طريقة الدفع</div>
+    <button class="sub-btn" onclick="submitThesis()">إرسال الطلب ✈️</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ TRANSLATION ══════════════ -->
+<div id="page-trans" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>🌐 ترجمة المحاضرات</h2></div>
+  <div class="trans-wrap">
+    <p class="trans-note">ارفع محاضرتك واختر نوع الخدمة</p>
+    <div class="trans-item" onclick="go('page-trans-form','ترجمة عربي → إنجليزي')">
+      <div><div class="t-name">عربي → إنجليزي</div><div class="t-desc">ترجمة محاضرتك للإنجليزية</div></div><span>🇬🇧 ←</span>
+    </div>
+    <div class="trans-item" onclick="go('page-trans-form','ترجمة إنجليزي → عربي')">
+      <div><div class="t-name">إنجليزي → عربي</div><div class="t-desc">ترجمة محاضرتك للعربية</div></div><span>🇮🇶 ←</span>
+    </div>
+    <div class="trans-item" onclick="go('page-trans-form','تلخيص المحاضرة')">
+      <div><div class="t-name">تلخيص المحاضرة</div><div class="t-desc">تلخيص وتبسيط المحتوى</div></div><span>📝 ←</span>
+    </div>
+    <div class="trans-item" onclick="go('page-trans-form','شرح المحاضرة')">
+      <div><div class="t-name">شرح المحاضرة</div><div class="t-desc">شرح تفصيلي للمفاهيم الصعبة</div></div><span>💡 ←</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRANS FORM -->
+<div id="page-trans-form" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-trans')">← رجوع</button><h2 id="tf-title">🌐 طلب ترجمة</h2></div>
+  <div class="fbody"><div class="finner">
+    <div class="fg">
+      <label>ارفع ملف المحاضرة <span class="req-lbl">*</span></label>
+      <div class="upload-area">
+        <input type="file" id="tr-file" accept=".pdf,.doc,.docx,.txt,.ppt,.pptx" onchange="showFile(this)">
+        <span class="upload-icon">📁</span>
+        <div class="upload-text">اضغط لرفع الملف</div>
+        <div class="upload-sub">PDF, Word, PowerPoint, TXT</div>
+        <div class="file-chosen" id="tr-file-name"></div>
+      </div>
+    </div>
+    <div class="fg"><label>معرّف تيليغرام للتسليم</label><input id="tr-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>ملاحظات <span class="opt-lbl">(اختياري)</span></label><textarea id="tr-notes" rows="3" placeholder="أي تعليمات خاصة..."></textarea></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 اختر طريقة الدفع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن يصلنا طلبك إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="tr-err">يرجى رفع الملف وتعبئة جميع الحقول</div>
+    <button class="sub-btn" onclick="submitTrans()">إرسال الطلب ✈️</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ OFFER BUNDLE FORM ══════════════ -->
+<div id="page-offer-bundle" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-offers')">← رجوع</button><h2>⭐ باقة تقرير + برزنتيشن</h2></div>
+  <div class="fbody"><div class="finner">
+    <div style="background:rgba(234,192,96,.08);border:1px solid rgba(234,192,96,.25);border-radius:12px;padding:.8rem;text-align:center;font-size:.8rem;color:var(--gold);font-weight:700">🎉 وفّر 20% — بدل 22,000 تدفع 17,600 د.ع فقط!</div>
+    <div class="fg"><label>الاسم الثلاثي</label><input id="b-name" type="text" placeholder="أحمد علي حسن"></div>
+    <div class="fg"><label>اسم الجامعة</label><input id="b-uni" type="text" placeholder="جامعة بغداد"></div>
+    <div class="fg"><label>اسم المادة / الموضوع</label><input id="b-subj" type="text" placeholder="قواعد البيانات"></div>
+    <div class="fg"><label>اسم الدكتور المشرف</label><input id="b-doc" type="text" placeholder="د. محمد"></div>
+    <div class="fg"><label>لغة التقرير</label><select id="b-lang"><option value="" disabled selected>اختر اللغة</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="b-tg" type="text" placeholder="@username"></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 اختر طريقة الدفع — 17,600 د.ع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن يصلنا طلبك إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="b-err">يرجى تعبئة جميع الحقول</div>
+    <button class="sub-btn" onclick="submitBundle()">إرسال الطلب ✈️</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ AI SERVICES ══════════════ -->
+<div id="page-ai-summarize" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>📚 تلخيص محاضرة — AI</h2></div>
+  <div class="fbody"><div class="finner">
+    <div style="background:rgba(109,40,217,.08);border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:.8rem;font-size:.78rem;color:#c4b5fd;line-height:1.6">⚡ الخدمة فورية — يصلك التلخيص خلال ثواني عبر تيليغرام بعد الدفع</div>
+    <div class="fg">
+      <label>ارفع ملف المحاضرة</label>
+      <div class="upload-area"><input type="file" id="as-file" accept=".pdf,.doc,.docx,.txt" onchange="showFile2(this,'as-fname')"><span class="upload-icon">📁</span><div class="upload-text">اضغط لرفع الملف</div><div class="upload-sub">PDF أو Word أو TXT</div><div class="file-chosen" id="as-fname"></div></div>
+    </div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="as-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>لغة التلخيص</label><select id="as-lang"><option value="" disabled selected>اختر</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 الدفع</div>
+      <div style="font-size:.78rem;color:var(--txt2);margin-bottom:.6rem">حتى 10 صفحات: 2,000 د.ع | 10-30 صفحة: 4,000 د.ع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن تُعالج الخدمة إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="as-err">يرجى رفع الملف وتعبئة الحقول</div>
+    <button class="sub-btn" onclick="submitAI('تلخيص محاضرة','as-tg','as-lang','as-err','as-file')">إرسال الطلب ⚡</button>
+  </div></div>
+</div>
+
+<div id="page-ai-questions" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>🎯 أسئلة متوقعة — AI</h2></div>
+  <div class="fbody"><div class="finner">
+    <div style="background:rgba(109,40,217,.08);border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:.8rem;font-size:.78rem;color:#c4b5fd;line-height:1.6">⚡ يولّد لك 20+ سؤال متوقع مع الإجابات — 3,000 د.ع فقط</div>
+    <div class="fg"><label>ارفع ملف المحاضرة</label><div class="upload-area"><input type="file" id="aq-file" accept=".pdf,.doc,.docx,.txt" onchange="showFile2(this,'aq-fname')"><span class="upload-icon">📁</span><div class="upload-text">اضغط لرفع الملف</div><div class="upload-sub">PDF أو Word أو TXT</div><div class="file-chosen" id="aq-fname"></div></div></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="aq-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>لغة الأسئلة</label><select id="aq-lang"><option value="" disabled selected>اختر</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 الدفع — 3,000 د.ع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن تُعالج الخدمة إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="aq-err">يرجى رفع الملف وتعبئة الحقول</div>
+    <button class="sub-btn" onclick="submitAI('أسئلة متوقعة للامتحان','aq-tg','aq-lang','aq-err','aq-file')">إرسال الطلب ⚡</button>
+  </div></div>
+</div>
+
+<div id="page-ai-improve" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>✨ تحسين التقرير — AI</h2></div>
+  <div class="fbody"><div class="finner">
+    <div style="background:rgba(109,40,217,.08);border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:.8rem;font-size:.78rem;color:#c4b5fd;line-height:1.6">✨ نحسن صياغة تقريرك ونصححه لغوياً ونرتبه أكاديمياً — 5,000 د.ع</div>
+    <div class="fg"><label>ارفع تقريرك</label><div class="upload-area"><input type="file" id="ai-file" accept=".pdf,.doc,.docx,.txt" onchange="showFile2(this,'ai-fname')"><span class="upload-icon">📄</span><div class="upload-text">اضغط لرفع التقرير</div><div class="upload-sub">PDF أو Word</div><div class="file-chosen" id="ai-fname"></div></div></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="ai-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>لغة التقرير</label><select id="ai-lang"><option value="" disabled selected>اختر</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 الدفع — 5,000 د.ع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن تُعالج الخدمة إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="aim-err">يرجى رفع الملف وتعبئة الحقول</div>
+    <button class="sub-btn" onclick="submitAI('تحسين وتصحيح التقرير','ai-tg','ai-lang','aim-err','ai-file')">إرسال الطلب ⚡</button>
+  </div></div>
+</div>
+
+<div id="page-ai-explain" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← رجوع</button><h2>💡 شرح موضوع — AI</h2></div>
+  <div class="fbody"><div class="finner">
+    <div style="background:rgba(109,40,217,.08);border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:.8rem;font-size:.78rem;color:#c4b5fd;line-height:1.6">💡 اكتب الموضوع الصعب ونشرحه لك بالتفصيل بأسلوب مبسط — 2,500 د.ع</div>
+    <div class="fg"><label>الموضوع الذي تريد شرحه</label><textarea id="ae-topic" rows="4" placeholder="مثال: شرح مفهوم التكامل في الرياضيات وطريقة حل المسائل..." style="background:rgba(12,32,64,.8);border:1px solid var(--bd1);border-radius:11px;color:var(--white);padding:.65rem .95rem;font-size:.84rem;font-family:'Cairo',sans-serif;direction:rtl;outline:none;width:100%;transition:all .2s"></textarea></div>
+    <div class="fg"><label>معرّف تيليغرام</label><input id="ae-tg" type="text" placeholder="@username"></div>
+    <div class="fg"><label>لغة الشرح</label><select id="ae-lang"><option value="" disabled selected>اختر</option><option>العربية</option><option>الإنجليزية</option></select></div>
+    <div class="pay-step">
+      <div class="pay-step-title">💳 الدفع — 2,500 د.ع</div>
+      <div class="pay-methods-big">
+        <div class="pay-method-btn" onclick="selectPay(this,'زين كاش')"><span class="pm-icon">💚</span><div class="pm-info"><div class="pm-name">زين كاش</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'آسيا حوالة')"><span class="pm-icon">🏦</span><div class="pm-info"><div class="pm-name">آسيا حوالة</div></div></div>
+        <div class="pay-method-btn" onclick="selectPay(this,'ماستر كارد')"><span class="pm-icon">💳</span><div class="pm-info"><div class="pm-name">ماستر كارد</div></div></div>
+      </div>
+      <div class="pay-confirm-note">⚠️ لن تُعالج الخدمة إلا بعد تأكيد الدفع.</div>
+    </div>
+    <div class="err-msg" id="ae-err">يرجى كتابة الموضوع وتعبئة الحقول</div>
+    <button class="sub-btn" onclick="submitExplain()">إرسال الطلب ⚡</button>
+  </div></div>
+</div>
+
+<!-- ══════════════ RATING ══════════════ -->
+<div id="page-rating" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← الرئيسية</button><h2>⭐ تقييم الخدمة</h2></div>
+  <div class="rating-wrap">
+    <div class="rating-card">
+      <span class="rating-icon">🌟</span>
+      <div class="rating-title">كيف كانت تجربتك؟</div>
+      <div class="rating-sub">رأيك يساعدنا نتطور ونخدمك أحسن</div>
+      <div class="stars-row" id="stars-row">
+        <button class="star-btn" onclick="rateStar(1)">★</button>
+        <button class="star-btn" onclick="rateStar(2)">★</button>
+        <button class="star-btn" onclick="rateStar(3)">★</button>
+        <button class="star-btn" onclick="rateStar(4)">★</button>
+        <button class="star-btn" onclick="rateStar(5)">★</button>
+      </div>
+      <textarea class="rating-textarea" id="rating-comment" rows="3" placeholder="شاركنا رأيك ، هل واجهت مشاكل؟"></textarea>
+      <button class="sub-btn" onclick="submitRating()">إرسال التقييم ⭐</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SUCCESS ══════════════ -->
+<div id="page-success" class="page">
+  <div class="fhdr"><button class="back-btn" onclick="go('page-home')">← الرئيسية</button><h2>تم الإرسال</h2></div>
+  <div class="success-wrap">
+    <div class="success-card">
+      <span class="suc-icon">✅</span>
+      <div class="suc-h">تم استلام طلبك!</div>
+      <div class="suc-p">سنتواصل معك عبر تيليغرام لتأكيد الدفع وبدء تنفيذ طلبك فوراً.</div>
+      <div class="suc-note">📩 راسلنا إذا ما وصلتك رسالة خلال 10 دقائق: @moujaziq_bot</div>
+      <button class="home-btn" onclick="go('page-rating')">⭐ قيّم تجربتك</button>
+      <button class="home-btn" style="margin-top:.5rem;background:rgba(12,32,64,.5)" onclick="go('page-home')">العودة للرئيسية</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ AI CHAT BUBBLE ══════════════ -->
+<div class="ai-chat-bubble">
+  <button class="ai-btn" onclick="toggleAI()" title="مساعد موجَز">🤖</button>
+  <div class="ai-panel" id="ai-panel">
+    <div class="ai-panel-hdr">
+      <span>🤖</span>
+      <div><div class="ai-title">مساعد موجَز</div><div class="ai-sub">متاح 24/7 للإجابة على أسئلتك</div></div>
+      <button class="ai-close" onclick="toggleAI()">✕</button>
+    </div>
+    <div class="ai-msgs" id="ai-msgs">
+      <div class="ai-msg bot">أهلاً! 👋 أنا مساعد موجَز. اسألني عن أي خدمة أو سعر أو طريقة دفع — وإذا عندك مشكلة راح أوصلها للفريق فوراً!</div>
+    </div>
+    <div class="ai-inp-row">
+      <input class="ai-inp" id="ai-inp" placeholder="اكتب سؤالك..." onkeydown="if(event.key==='Enter')sendAI()">
+      <button class="ai-send" onclick="sendAI()">←</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const BOT='8904152939:AAEx3q6CE1LsXkT8qnF_rA1GbC4wOWak9OQ';
+const CID='5648566380';
+let currentPkg='',selectedPay='',currentRating=0;
+
+function go(id,param){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById(id);
+  if(el){el.classList.add('active');window.scrollTo(0,0)}
+  if(id==='page-present-form'&&param){currentPkg=param;document.getElementById('pf-title').textContent='📊 برزنتيشن — باقة '+param}
+  if(id==='page-trans-form'&&param){currentPkg=param;document.getElementById('tf-title').textContent='🌐 '+param}
+}
+function v(id){return(document.getElementById(id)?.value||'').trim()}
+function rv(name){const r=document.querySelector(`input[name="${name}"]:checked`);return r?r.value:''}
+function showErr(id,msg){const el=document.getElementById(id);if(el){el.textContent=msg||'يرجى تعبئة جميع الحقول';el.classList.add('show');setTimeout(()=>el.classList.remove('show'),4500)}}
+function setBtn(sel,loading){const b=document.querySelector(sel+' .sub-btn');if(b){b.disabled=loading;b.textContent=loading?'⏳ جاري الإرسال...':'إرسال الطلب ✈️'}}
+
+function selectPay(el,method){
+  const parent=el.closest('.pay-step');
+  parent.querySelectorAll('.pay-method-btn').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPay=method;
+}
+
+async function tg(text){
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${BOT}/sendMessage`,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({chat_id:CID,text,parse_mode:'HTML'})
+    });
+    return r.ok;
+  }catch{return false}
+}
+
+function showFile(inp){const f=inp.files[0];if(f)document.getElementById('tr-file-name').textContent='✓ '+f.name}
+function showFile2(inp,labelId){const f=inp.files[0];if(f)document.getElementById(labelId).textContent='✓ '+f.name}
+
+async function submitReport(){
+  const name=v('r-name'),uni=v('r-uni'),dept=v('r-dept'),subj=v('r-subj'),
+        pages=rv('rpages'),urgent=rv('rurgent'),lang=v('r-lang'),topic=v('r-topic'),doc=v('r-doc'),tgid=v('r-tg');
+  if(!name||!uni||!dept||!subj||!pages||!urgent||!lang||!doc||!tgid||!selectedPay){showErr('r-err');return}
+  setBtn('#page-report',true);
+  const ok=await tg(`📄 <b>طلب جديد — تقرير جامعي</b>\n━━━━━━━━━━━━━━\n👤 الاسم: ${name}\n🏫 الجامعة: ${uni}\n📚 القسم: ${dept}\n📖 المادة: ${subj}\n📃 الصفحات: ${pages}\n⚡ التسليم: ${urgent}\n🌐 اللغة: ${lang}\n📝 الموضوع: ${topic||'غير محدد'}\n👨‍🏫 الدكتور: ${doc}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n━━━━━━━━━━━━━━`);
+  setBtn('#page-report',false);
+  selectedPay='';
+  ok?go('page-success'):showErr('r-err','حدث خطأ، حاول مجدداً');
+}
+async function submitPresent(){
+  const name=v('p-name'),uni=v('p-uni'),topic=v('p-topic'),tgid=v('p-tg'),notes=v('p-notes');
+  if(!name||!uni||!topic||!tgid||!selectedPay){showErr('p-err');return}
+  setBtn('#page-present-form',true);
+  const ok=await tg(`📊 <b>طلب جديد — برزنتيشن</b>\n━━━━━━━━━━━━━━\n📦 الباقة: ${currentPkg}\n👤 الاسم: ${name}\n🏫 الجامعة: ${uni}\n📝 الموضوع: ${topic}\n✈️ تيليغرام: ${tgid}\n💬 ملاحظات: ${notes||'لا يوجد'}\n💳 الدفع: ${selectedPay}\n━━━━━━━━━━━━━━`);
+  setBtn('#page-present-form',false);
+  selectedPay='';
+  ok?go('page-success'):showErr('p-err','حدث خطأ، حاول مجدداً');
+}
+async function submitThesis(){
+  const name=v('t-name'),uni=v('t-uni'),dept=v('t-dept'),subj=v('t-subj'),pages=v('t-pages'),lang=v('t-lang'),topic=v('t-topic'),doc=v('t-doc'),tgid=v('t-tg');
+  if(!name||!uni||!dept||!subj||!pages||!lang||!topic||!doc||!tgid||!selectedPay){showErr('t-err');return}
+  setBtn('#page-thesis',true);
+  const ok=await tg(`🎓 <b>طلب جديد — بحث تخرج</b>\n━━━━━━━━━━━━━━\n👤 الاسم: ${name}\n🏫 الجامعة: ${uni}\n📚 القسم: ${dept}\n📖 المادة: ${subj}\n📃 الصفحات: ${pages}\n🌐 اللغة: ${lang}\n📝 الموضوع: ${topic}\n👨‍🏫 الدكتور: ${doc}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n💰 السعر: 30,000 د.ع\n━━━━━━━━━━━━━━`);
+  setBtn('#page-thesis',false);
+  selectedPay='';
+  ok?go('page-success'):showErr('t-err','حدث خطأ، حاول مجدداً');
+}
+async function submitTrans(){
+  const tgid=v('tr-tg'),notes=v('tr-notes'),fileInp=document.getElementById('tr-file');
+  if(!tgid||!selectedPay||!fileInp?.files?.length){showErr('tr-err');return}
+  setBtn('#page-trans-form',true);
+  const ok=await tg(`🌐 <b>طلب جديد — ترجمة محاضرات</b>\n━━━━━━━━━━━━━━\n📌 النوع: ${currentPkg}\n📁 الملف: ${fileInp.files[0]?.name||'مرفق'}\n💬 ملاحظات: ${notes||'لا يوجد'}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n━━━━━━━━━━━━━━`);
+  setBtn('#page-trans-form',false);
+  selectedPay='';
+  ok?go('page-success'):showErr('tr-err','حدث خطأ، حاول مجدداً');
+}
+async function submitBundle(){
+  const name=v('b-name'),uni=v('b-uni'),subj=v('b-subj'),doc=v('b-doc'),lang=v('b-lang'),tgid=v('b-tg');
+  if(!name||!uni||!subj||!doc||!lang||!tgid||!selectedPay){showErr('b-err');return}
+  setBtn('#page-offer-bundle',true);
+  const ok=await tg(`⭐ <b>طلب جديد — باقة تقرير + برزنتيشن</b>\n━━━━━━━━━━━━━━\n👤 الاسم: ${name}\n🏫 الجامعة: ${uni}\n📖 المادة: ${subj}\n👨‍🏫 الدكتور: ${doc}\n🌐 اللغة: ${lang}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n💰 السعر: 17,600 د.ع (خصم 20%)\n━━━━━━━━━━━━━━`);
+  setBtn('#page-offer-bundle',false);
+  selectedPay='';
+  ok?go('page-success'):showErr('b-err','حدث خطأ، حاول مجدداً');
+}
+async function submitAI(serviceType,tgField,langField,errField,fileField){
+  const tgid=v(tgField),lang=v(langField),fileInp=document.getElementById(fileField);
+  if(!tgid||!lang||!selectedPay){showErr(errField);return}
+  const btn=document.querySelector(`#page-ai-${fileField.split('-')[0]==='as'?'summarize':fileField.split('-')[0]==='aq'?'questions':fileField.split('-')[0]==='ai'?'improve':'explain'} .sub-btn`);
+  if(btn){btn.disabled=true;btn.textContent='⏳ جاري الإرسال...'}
+  const ok=await tg(`🤖 <b>طلب جديد — خدمة AI: ${serviceType}</b>\n━━━━━━━━━━━━━━\n📁 الملف: ${fileInp?.files?.[0]?.name||'مرفق'}\n🌐 اللغة: ${lang}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n━━━━━━━━━━━━━━`);
+  if(btn){btn.disabled=false;btn.textContent='إرسال الطلب ⚡'}
+  selectedPay='';
+  ok?go('page-success'):showErr(errField,'حدث خطأ، حاول مجدداً');
+}
+async function submitExplain(){
+  const topic=document.getElementById('ae-topic')?.value?.trim(),tgid=v('ae-tg'),lang=v('ae-lang');
+  if(!topic||!tgid||!lang||!selectedPay){showErr('ae-err');return}
+  const btn=document.querySelector('#page-ai-explain .sub-btn');
+  if(btn){btn.disabled=true;btn.textContent='⏳ جاري الإرسال...'}
+  const ok=await tg(`💡 <b>طلب جديد — شرح موضوع AI</b>\n━━━━━━━━━━━━━━\n📝 الموضوع: ${topic}\n🌐 اللغة: ${lang}\n✈️ تيليغرام: ${tgid}\n💳 الدفع: ${selectedPay}\n━━━━━━━━━━━━━━`);
+  if(btn){btn.disabled=false;btn.textContent='إرسال الطلب ⚡'}
+  selectedPay='';
+  ok?go('page-success'):showErr('ae-err','حدث خطأ، حاول مجدداً');
+}
+
+function rateStar(n){
+  currentRating=n;
+  document.querySelectorAll('.star-btn').forEach((s,i)=>{s.classList.toggle('lit',i<n)});
+}
+async function submitRating(){
+  if(!currentRating){alert('اختر عدد النجوم أولاً');return}
+  const comment=v('rating-comment');
+  const stars='⭐'.repeat(currentRating);
+  const ok=await tg(`${stars} <b>تقييم جديد</b>\n━━━━━━━━━━━━━━\n🌟 التقييم: ${currentRating}/5\n💬 التعليق: ${comment||'بدون تعليق'}\n━━━━━━━━━━━━━━`);
+  if(ok){document.querySelector('.rating-card').innerHTML='<span class="rating-icon" style="display:block;text-align:center">🙏</span><div class="rating-title" style="text-align:center;color:var(--green)">شكراً على تقييمك!</div><div class="rating-sub" style="text-align:center">رأيك يساعدنا نتطور</div>';setTimeout(()=>go('page-home'),2000)}
+}
+
+function toggleFaq(el){
+  const ans=el.nextElementSibling;
+  const arrow=el.querySelector('span');
+  ans.classList.toggle('open');
+  arrow.style.transform=ans.classList.contains('open')?'rotate(180deg)':'rotate(0)';
+}
+
+function generateRef(){
+  const code='MJZ'+Math.random().toString(36).substr(2,6).toUpperCase();
+  document.getElementById('ref-link-display').textContent=`moujaz.netlify.app/?ref=${code}`;
+}
+
+// AI CHAT
+let aiOpen=false;
+function toggleAI(){aiOpen=!aiOpen;document.getElementById('ai-panel').classList.toggle('open',aiOpen)}
+
+const aiResponses={
+  'سعر':'📋 أسعارنا:\n• تقرير 5 صفحات: 7,000 د.ع\n• 6-10 صفحات: 12,000\n• 11-15 صفحة: 18,000\n• برزنتيشن: 8,000-25,000\n• بحث تخرج: 30,000\n• تلخيص AI: 2,000-4,000',
+  'وقت':'⏰ أوقات التسليم:\n• تقرير عادي: 24-48 ساعة\n• تسليم عاجل: 12 ساعة (+3,000 د.ع)\n• خدمات AI: فوري بثواني!',
+  'دفع':'💳 طرق الدفع:\n• زين كاش\n• آسيا حوالة\n• ماستر كارد\nالدفع يصير قبل إرسال الطلب لنا.',
+  'سري':'🔒 نعم، خدمتنا سرية 100%. معلوماتك تبقى بيننا فقط ولا تشارك مع أي جهة.',
+  'مشكل':'⚠️ وصلني مشكلتك. راح أوصلها للفريق فوراً — تواصل على @moujaziq_bot وهم يساعدونك.',
+  'ذكاء':'🤖 خدمات AI عندنا:\n• تلخيص محاضرة\n• أسئلة متوقعة للامتحان\n• تحسين التقرير\n• شرح موضوع صعب\nكلها فورية وبأسعار منافسة!',
+  'عرض':'🔥 عروضنا الحصرية:\n• تقرير + برزنتيشن بخصم 20%\n• تسليم عاجل 12 ساعة +3,000 فقط\n• دعوة صديق: خصم 10% لكليكم!',
+};
+
+async function sendAI(){
+  const inp=document.getElementById('ai-inp');
+  const msg=inp.value.trim();
+  if(!msg)return;
+  addAIMsg(msg,'user');
+  inp.value='';
+  const typing=addAIMsg('...','bot typing');
+
+  // Check local responses first
+  let response=null;
+  for(const[key,val] of Object.entries(aiResponses)){
+    if(msg.includes(key)){response=val;break}
+  }
+
+  if(response){
+    setTimeout(()=>{typing.textContent=response;typing.classList.remove('typing')},800);
+  }else{
+    // Call Claude API for unknown questions
+    try{
+      const res=await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          model:'claude-sonnet-4-20250514',
+          max_tokens:300,
+          system:'أنت مساعد لموقع موجَز للخدمات الأكاديمية العراقية. أجب بشكل مختصر وودود باللهجة العراقية. الخدمات: تقرير جامعي، برزنتيشن، بحث تخرج، ترجمة محاضرات، وخدمات ذكاء اصطناعي. إذا الطالب عنده مشكلة، وجهه لـ @moujaziq_bot. لا تتجاوز 100 كلمة.',
+          messages:[{role:'user',content:msg}]
+        })
+      });
+      const data=await res.json();
+      const reply=data.content?.[0]?.text||'تواصل معنا على @moujaziq_bot وراح نساعدك!';
+      typing.textContent=reply;
+      typing.classList.remove('typing');
+
+      // Alert admin if problem detected
+      if(msg.includes('مشكل')||msg.includes('خطأ')||msg.includes('شكوى')){
+        tg(`⚠️ <b>مشكلة من الشات</b>\n💬 الرسالة: ${msg}`);
+      }
+    }catch{
+      typing.textContent='تواصل معنا على @moujaziq_bot وراح نساعدك فوراً!';
+      typing.classList.remove('typing');
+    }
+  }
+  const msgs=document.getElementById('ai-msgs');
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function addAIMsg(text,type){
+  const msgs=document.getElementById('ai-msgs');
+  const d=document.createElement('div');
+  d.className='ai-msg '+(type.includes('user')?'user':'bot')+(type.includes('typing')?' typing':'');
+  d.textContent=text;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+  return d;
+}
+</script>
+</body>
+</html>
